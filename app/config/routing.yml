@@ -1,0 +1,7 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+test_my_register:
+    path:     /lucky/jquery
+    defaults: { _controller: TestMyBundle:Transaction:registerTransaction }

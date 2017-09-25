@@ -1,0 +1,26 @@
+{# app/Resources/views/lucky/number.html.twig #}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Innovative Com</title>
+        <script src="{{ asset('jquery/jquery-3.2.1.min.js') }}"></script>
+    </head>
+    <body>
+    
+        <h1>Your lucky number is {{ number }}</h1>
+
+		<input type="button" name="botao" id="botao" value="Clique"  />
+		
+		<script>
+			$( "#botao" ).click(function() {
+				$.post("/lucky/jquery",
+				function(data, status){
+	        		alert("Data: " + data + "\nStatus: " + status);
+	    		});
+	  		});
+		</script>
+		
+    </body>
+</html>
